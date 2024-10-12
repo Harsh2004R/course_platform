@@ -1,13 +1,17 @@
-import { Box, Center } from '@chakra-ui/react'
+import { Box, Center, Container } from '@chakra-ui/react'
 import React from 'react'
 import Navbar from "../Components/Navbar.jsx"
 const Home = () => {
   return (
 
     <>
-      <Box width={"100%"} h="500vh" border={"2px solid lime"}>
-        <Navbar />
+
+
+      <Box w="100%" h="100vh" border="1px solid lime">
+      <Navbar />
+
       </Box>
+
     </>
 
   )
