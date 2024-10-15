@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
-import Home from '../Pages/Home';
+import Home from '../Pages/HomeComponents/Home';
 import Buy from '../Pages/Buy';
 
 const AllRoutes = () => {

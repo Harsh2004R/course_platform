@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box w="100%" h="12vh" position={"fixed"}>
+      <Box w="100%" h="12vh" bg="#fff" position={"fixed"}>
         <Box
           // border={"1px solid blue"}
           m="auto" display={"flex"} w={{ base: "100%", md: "95%", lg: "93%" }} h="100%">
@@ -101,11 +101,11 @@ const Navbar = () => {
 
 
 
-          <Box 
-          // border="1px solid red"
-          display={{ base: "none", md: "none", lg: "flex" }} w="76%"  h="100%" >
+          <Box
+            // border="1px solid red"
+            display={{ base: "none", md: "none", lg: "flex" }} w="76%" h="100%" >
             <Box w='30%' h='100%' ></Box>
-            <Box display={"flex"} justifyContent={"space-between"} w="100%" h="100%" 
+            <Box display={"flex"} justifyContent={"space-between"} w="100%" h="100%"
             // border={"2px solid red"}
             >
 
@@ -132,8 +132,8 @@ const Navbar = () => {
                 <Button
                   bg="#fff"
                   transition={"0.3s ease"}
-                  borderColor={"#ff5757"}
-                  _hover={{ bgColor: "red.100", borderColor: "#ff5757" }}
+                  border={"1px solid #ff5757"}
+                  _hover={{ bgColor: "red.100" }}
                   color={"#ff5757"}
                   h="45px" w="100%" m="auto" fontSize={"14px"}>REGISTER</Button>
               </Center>
@@ -154,6 +154,8 @@ const Navbar = () => {
                 left="0"
                 zIndex="10"
                 transition={"0.25s ease"}
+                bg="#fff"
+                borderBottomRightRadius={"lg"}
 
               >
                 {/* content goes here */}
@@ -179,7 +181,7 @@ const Navbar = () => {
                       <Button
                         bg="#fff"
                         transition={"0.3s ease"}
-                        borderColor={"#ff5757"}
+                        border={"1px solid #ff5757"}
                         _hover={{ bgColor: "red.100", borderColor: "#ff5757" }}
                         color={"#ff5757"}
                         h="45px" w="100%" m="auto" fontSize={"14px"}>REGISTER</Button>
