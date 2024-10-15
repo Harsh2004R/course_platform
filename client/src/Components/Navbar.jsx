@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <>
-      <Box w="100%" h="12vh" bg="#fff" position={"fixed"}>
+      <Box w="100%" h="12vh" bg="#fff" position={"fixed"} zIndex="1000" top="0">
         <Box
           // border={"1px solid blue"}
           m="auto" display={"flex"} w={{ base: "100%", md: "95%", lg: "93%" }} h="100%">
