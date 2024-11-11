@@ -2,6 +2,7 @@ import { Box, Center, Container } from '@chakra-ui/react'
 import React from 'react'
 import Navbar from "../../Components/Navbar.jsx"
 import Hero from '../HomeComponents/Hero.jsx'
+import Courses from './Courses.jsx'
 const Home = () => {
   return (
 
@@ -12,6 +13,7 @@ const Home = () => {
         <Box w="100%" h="12vh" bg="#fff" ></Box>
         {/* Hero Section goes here... */}
         <Hero />
+        <Courses />
 
 
 
