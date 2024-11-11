@@ -188,14 +188,14 @@ const Hero = () => {
                         <Button
                             mt={{ base: "15px", md: "15px", lg: "20px" }}
                             bg="#ff0000"
-                            w={{ base: "150px", md: "150px", lg: "170px" }}
+                            w={{ base: "150px", md: "150px", lg: "200px" }}
                             textColor={"#FFFFFF"}
                             transition={"0.3s ease"}
                             border={"1px solid #ff5757"}
-                            fontSize={{ base: "18px", md: "20px", lg: "22px" }}
+                            fontSize={{ base: "18px", md: "19px", lg: "20px" }}
                             _hover={{ bgColor: "red.500" }}
                             h='50px'>
-                            Start Learning
+                            START LEARNING
                         </Button>
                     </Box>
                 </Box>
