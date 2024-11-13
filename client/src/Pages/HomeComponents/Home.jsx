@@ -15,6 +15,7 @@ const Home = () => {
         <Hero />
         <Courses />
 
+       
 
 
 
@@ -30,3 +31,5 @@ const Home = () => {
 }
 
 export default Home
+
+
