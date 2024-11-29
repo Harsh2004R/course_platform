@@ -238,10 +238,11 @@ const Courses = () => {
                                         >
                                             <Box border="0.5px solid #ccc" boxShadow={"xl"} py="5" px="5" m="auto" borderRadius={"xl"} w={{ base: "100%", md: "100%", lg: "100%" }} h="100%" >
                                                 <Box w="60px" h="60px">
-                                                    <Image src={AI} alt="Software engeneering.png" />
+                                                    <Image src={BA} alt="Software engeneering.png" />
                                                 </Box>
-                                                <Text mt="5px" fontWeight={{ base: "600", md: "600", lg: "700" }} fontSize={"2xl"}>Minor in Artificial
-                                                    Intelligence</Text>
+                                                <Text mt="5px" fontWeight={{ base: "600", md: "600", lg: "700" }} fontSize={"2xl"}>Minor in Business
+                                                    Analytics
+                                                </Text>
                                                 <Divider />
                                                 <Box justifyContent={"left"} alignContent={'center'} alignItems={"center"} display={"flex"} flexDirection={"row"} w="100%" h="auto" mt="16px">
                                                     <Box px="1" py="1" bg="green.50" borderRadius={'50%'}>
