@@ -4,7 +4,7 @@ import { Box, Image, Text } from "@chakra-ui/react";
 const Marquee = () => {
 
     const images = [
-        "https://via.placeholder.com/150/FF0000",
+        "https://masai-website-images.s3.ap-south-1.amazonaws.com/globallogic_c30eb641f7.svg",
         "https://via.placeholder.com/150/00FF00",
         "https://via.placeholder.com/150/0000FF",
         "https://via.placeholder.com/150/FFFF00",

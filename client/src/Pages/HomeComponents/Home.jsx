@@ -15,7 +15,7 @@ const Home = () => {
         {/* Hero Section goes here... */}
         <Hero />
         <Courses />
-        <Box w="100%" h={{base:"50px",md:"150px",lg:"180px" }}></Box>
+        <Box w="100%" h={{base:"50px",md:"120px",lg:"150px" }}></Box>
         <Marquees />
 
 
