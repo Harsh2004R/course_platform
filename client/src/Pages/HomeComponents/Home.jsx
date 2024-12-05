@@ -4,6 +4,7 @@ import Navbar from "../../Components/Navbar.jsx"
 import Hero from '../HomeComponents/Hero.jsx'
 import Courses from './Courses.jsx'
 import Marquees from './Marquees.jsx'
+import Test from "./Test.jsx"
 const Home = () => {
   return (
 
@@ -17,6 +18,7 @@ const Home = () => {
         <Courses />
         <Box w="100%" h={{base:"50px",md:"120px",lg:"150px" }}></Box>
         <Marquees />
+        <Box w="100%" h={{base:"30px",md:"50px",lg:"80px" }}></Box>
 
 
 
