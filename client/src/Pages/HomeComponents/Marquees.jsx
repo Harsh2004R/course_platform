@@ -44,8 +44,8 @@ const Marquee = () => {
                 Launch Your Career In Tech With Us
             </Text>
             <Box
-            //  border={"4px solid cyan"} 
-            display={"flex"} justifyContent={"space-evenly"} flexDirection={{ base: "column", md: "column", lg: "row" }} w="100%" h="auto">
+                //  border={"4px solid cyan"} 
+                display={"flex"} justifyContent={"space-evenly"} flexDirection={{ base: "column", md: "column", lg: "row" }} w="100%" h="auto">
 
 
                 <Box w={{ base: "100%", md: "100%", lg: "35%" }} h="auto"
@@ -112,7 +112,7 @@ const Marquee = () => {
 
                 <Box mt={{ base: "20px", md: "0px", lg: "0px" }} w={{ base: "100%", md: "100%", lg: "60%" }} h="auto"
                 //  border={'2px solid red'}
-                 >
+                >
                     <Box
                         m="auto"
                         bgColor={"rgb(255 224 239)"}
@@ -232,10 +232,10 @@ const Marquee = () => {
 
                     <Box m="auto" borderRadius={"20px"} mt="20px" w={{ base: "100%", md: "100%", lg: "95%" }} h="200px" bg="rgb(254 235 239)">
                         <Text color="rgb(237 3 49)" fontStyle="italic" fontWeight={{ base: "600", md: "600", lg: "700" }} paddingTop={"10px"} textAlign={"center"} fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }} >Trained & Placed
+                        </Text>
+                        <Text color="rgb(237 3 49)" fontStyle="italic" fontWeight={{ base: "600", md: "600", lg: "700" }} textAlign={"center"} fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }} >
                             Students</Text>
-                            <Text color="rgb(237 3 49)" fontStyle="italic" fontWeight={{ base: "600", md: "600", lg: "700" }}  textAlign={"center"} fontSize={{ base: "2xl", md: "2xl", lg: "3xl" }} >
-                            Students</Text>
-                        <Text fontWeight={{ base: "600", md: "600", lg: "800" }} color="#263238" fontSize={{base:"5xl",md:"6xl",lg:"70px"}} textAlign={"center"} >6000+🤩</Text>
+                        <Text fontWeight={{ base: "600", md: "600", lg: "800" }} color="#263238" fontSize={{ base: "5xl", md: "6xl", lg: "70px" }} textAlign={"center"} >6000+🤩</Text>
                     </Box>
                 </Box>
 
