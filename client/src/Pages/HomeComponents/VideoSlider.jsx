@@ -3,17 +3,8 @@ import { Box, Button, Flex, AspectRatio, Text, Center, Grid, Image } from "@chak
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import C1 from "../../Logo/Companies/C1.jpeg"
-import C2 from "../../Logo/Companies/C2.png"
-import C3 from "../../Logo/Companies/C3.png"
-import C4 from "../../Logo/Companies/C4.jpeg"
-import C5 from "../../Logo/Companies/C5.jpeg"
-import C6 from "../../Logo/Companies/C6.jpeg"
 import C7 from "../../Logo/Companies/C7.png"
-import C8 from "../../Logo/Companies/C8.png"
-import C9 from "../../Logo/Companies/C9.jpeg"
-import C10 from "../../Logo/Companies/C10.jpeg"
-import C11 from "../../Logo/Companies/C11.jpeg"
-import C12 from "../../Logo/Companies/C12.png"
+import C3 from "../../Logo/Companies/C3.png"
 
 const videos = [
     "https://cdn.masaischool.com/masai-website/masai_is_building_a_great_solution_ankush_sachdeva_ceo_sharechat_1080p_679f7eaffd.mp4",
@@ -79,9 +70,9 @@ const VideoSlider = () => {
                 </Box>
             </Flex>
             <Center py="50px" w="100%" h="auto" bg="rgb(249,249,249)" flexDirection={"column"}>
-                <Grid 
-                // border={"1px solid red"}
-                gap="10px" gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }} w={{ base: "98%", md: "95%", lg: "85%" }} h="100%" >
+                <Grid
+                    // border={"1px solid red"}
+                    gap="10px" gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }} w={{ base: "98%", md: "95%", lg: "85%" }} h="100%" >
                     <Box py="5px" px="20px" boxShadow={"xl"} borderRadius={"xl"} w="100%" h="300px" bg="white">
 
                         <Box w={{ base: "80px", md: "100px", lg: "120px" }} h={{ base: "30px", md: "100px", lg: "50px" }}
@@ -149,7 +140,7 @@ const VideoSlider = () => {
 
                     </Box>
                 </Grid>
-                <Text fontWeight={"600"} _hover={{textDecoration:"underline", cursor:"pointer"}} color={"red.500"} mt="10px">Read More</Text>
+                <Text fontWeight={"600"} _hover={{ textDecoration: "underline", cursor: "pointer" }} color={"red.500"} mt="10px">Read More</Text>
             </Center>
         </>
     );
