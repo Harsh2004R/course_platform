@@ -1,11 +1,18 @@
-import React from 'react'
-import { Box, Button, Center,Image, Flex, Text } from '@chakra-ui/react'
-import homeBG1 from "../../Logo/BG-Images/homeBG1.jpg"
+import React from 'react';
+import { Box, Button, Center, Image, Flex, Text } from '@chakra-ui/react';
+import homeBG1 from "../../Logo/BG-Images/homeBG1.jpg";
 import { HiArrowLongRight } from "react-icons/hi2";
+import US1 from "../../assets/Us/US1.png";
+import US2 from "../../assets/Us/US2.png";
+import US3 from "../../assets/Us/US3.png";
+import US4 from "../../assets/Us/US4.png";
+import US5 from "../../assets/Us/US5.png";
+import US6 from "../../assets/Us/US6.png";
 const OurTeam = () => {
     return (
         <Box
             // border={"2px solid cyan"}
+            borderBottom={"7px solid #7182F4"}
             bgImage={`url(${homeBG1})`}
             bgSize="cover"
             bgRepeat="no-repeat"
@@ -17,10 +24,12 @@ const OurTeam = () => {
             </Box>
             <Flex
                 // border={"2px solid #000"}
-                m="auto" h={{ base: "100%", md: "100%", lg: "85%" }} w={{ base: "98%", md: "95%", lg: "90%" }} direction={{ base: "column", md: "row", lg: "row" }}>
-                <Flex direction={"column"} h="100%" border={"1px solid green"} w={{ base: "100%", md: "100%", lg: "100%" }} >
+                m="auto" h={{ base: "100%", md: "100%", lg: "80%" }} w={{ base: "98%", md: "95%", lg: "90%" }} direction={{ base: "column", md: "row", lg: "row" }}>
+                <Flex justifyContent={"space-between"} direction={"column"} h={{ base: "90%", md: "95%", lg: "100%" }}
+                    // border={"1px solid green"}
+                    w={{ base: "100%", md: "100%", lg: "100%" }} >
                     <Box
-                        border={"2px solid #000"}
+                        // border={"2px solid #000"}
                         h={{ base: "35%", md: "40%", lg: "30%" }}
                         w="100%"
                     >
@@ -39,27 +48,76 @@ const OurTeam = () => {
                             h="42px" w={"auto"} m="auto" fontSize={"14px"}>JOIN COMMUNITY <HiArrowLongRight size="20px" /></Button>
 
                     </Box>
-                    <Flex border={"2px solid #dadada"}
-                        h={{ base: "65%", md: "60%", lg: "70%" }}
+                    <Flex
+                        // border={"2px solid #dadada"}
+                        h={{ base: "65%", md: "60%", lg: "100%" }}
                         w="100%" direction={"row"} justifyContent={{ base: "space-between", md: "space-evenly", lg: "space-evenly" }}>
 
-                        <Flex direction={"column"} w={{ base: "38%", md: "35%", lg: "35%" }} bg="red" h="100%">
-                            <Box w="100%" h={{ base: "55%", md: "55%", lg: "55%" }} >
+                        <Flex direction={"column"} w={{ base: "38%", md: "35%", lg: "35%" }} bg="transparent" h="100%">
+                            <Box w="100%" h={{ base: "55%", md: "55%", lg: "58%" }} >
 
                             </Box>
-                            <Box w="100%" h={{ base: "45%", md: "45%", lg: "45%" }} >
-                                <Image src="" alt="" />
+                            <Box w="100%" h={{ base: "45%", md: "45%", lg: "42%" }} >
+                                <Image w="100%" h="100%" src={US1} alt="" />
                             </Box>
                         </Flex>
                         <Box w={{ base: "60%", md: "60%", lg: "60%" }} bg="grey" h="100%">
-
+                            <Image w="100%" h="100%" src={US2} alt="" />
                         </Box>
                     </Flex>
 
                 </Flex>
-                <Box h="100%" border={"1px solid red"} w={{ base: "100%", md: "100%", lg: "100%" }} >
+                <Flex 
+                // border={"1px solid red"}
+                h="100%" justifyContent={"space-between"} 
+                direction={"column"} w={{ base: "100%", md: "100%", lg: "100%" }} >
+                    <Flex
+                        // border={"1px solid cyan"}
+                        h="49%"
+                        justifyContent={"space-between"}
+                        w="100%"
+                    >
+                        <Box
+                            w={{ base: "58%", md: "60%", lg: "66%" }}
+                            // border={"2px solid coral"}
+                            h="100%"
+                            p="4px"
+                        >
+                            <Image src={US3} alt="img.png" w="100%" h="100%" />
+                        </Box>
+                        <Box
+                            w={{ base: "40%", md: "38%", lg: "32%" }}
+                            // border={"2px solid coral"}
+                            h={{ base: "75%", md: "90%", lg: "100%" }}
+                            m={{ base: "auto", md: "auto", lg: "0px" }}
+                        >
+                            <Image src={US4} alt="img.png" w="100%" h="100%" />
+                        </Box>
+                    </Flex>
+                    <Flex
+                        // border={"1px solid cyan"}
+                        h="49%"
+                        justifyContent={"space-between"}
+                        w="100%">
+                        <Box
+                            w={{ base: "40%", md: "38%", lg: "32%" }}
+                            // border={"2px solid coral"}
+                            h={{ base: "75%", md: "90%", lg: "100%" }}
+                            m={{ base: "auto", md: "auto", lg: "0px" }}
 
-                </Box>
+                        >
+                            <Image src={US5} alt="img.png" w="100%" h="100%" />
+                        </Box>
+                        <Box
+                             w={{ base: "58%", md: "60%", lg: "66%" }}
+                            // border={"2px solid coral"}
+                             p="4px"
+                            h="100%"
+                        >
+                            <Image src={US6} alt="img.png" w="100%" h="100%" />
+                        </Box>
+                    </Flex>
+                </Flex>
             </Flex>
 
         </Box>
