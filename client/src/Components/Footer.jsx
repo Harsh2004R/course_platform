@@ -14,18 +14,25 @@ import logo from "../Logo/Masterolgy-logo-normal.png"
 const Footer = () => {
     return (
         <>
-            {/* Title Section */}
-            <Flex
+        <Box w="100%" h="auto" 
+        //  border={"3px solid red"}
+         >
+                {/* Title Section */}
+                <Flex
                 justify="center"
                 align="center"
                 mt="10"
                 w="100%"
+                bg="#000"
+                pb="10px"
+                borderTopRadius={{base:"30px",md:"40px",lg:"50px"}}
                 direction={{base:"column",md:"column",lg:"row"}}
             >
                 <Heading
-                    fontFamily="'Bodoni Moda', serif"
-                    color="gray.800"
-                    fontSize={{base:"14px",md:"1rem",lg:"2rem"}}
+                py="20px"
+                    // fontFamily="'Bodoni Moda', serif"
+                    color="#FFF"
+                    fontSize={{base:"14px",md:"1rem",lg:"1.8rem"}}
                     whiteSpace="nowrap"
                 >
                     Building your tech skills has never been easier. 
@@ -38,16 +45,14 @@ const Footer = () => {
             {/* Footer Section */}
             <Box
                 as="footer"
-                bg="gray.800"
-                color="gray.200"
+                bg="#000"
                 w="100%"
                 py="10"
-                mt="20"
-                border={"2px solid cyan"}
+                borderTop={"1px solid #333"}
             >
                 <Flex
                     direction={{ base: 'column', md: 'row' }}
-                    maxW="1200px"
+                    maxW="1400px"
                     mx="auto"
                     px={{ base: '5', md: '20' }}
                     gap={{ base: '10', md: '20' }}
@@ -62,7 +67,7 @@ const Footer = () => {
                         >
                             <Image w="100%" h="100%" src={logo} alt="" />
                         </Box>
-                        <Text fontSize="sm" lineHeight="1.6">
+                        <Text color={"#CECCCD"} fontSize="sm" lineHeight="1.6">
                             Masterolgy Industries Ltd.
                             <br />
                             Providing reliable masters since 2018.
@@ -71,10 +76,14 @@ const Footer = () => {
 
                     {/* Navigation Sections */}
                     <Flex
-                        gap="10"
+                        gap={{base:"10",md:"10",lg:"24"}}
                         direction={{ base: 'column', md: 'row' }}
                     >
                         {[
+                            {
+                                heading: 'Stories',
+                                links: ['Success Stories', 'Hire From Us', 'Talent Circle', 'Our Investors'],
+                            },
                             {
                                 heading: 'Services',
                                 links: ['Branding', 'Design', 'Marketing', 'Advertisement'],
@@ -95,7 +104,11 @@ const Footer = () => {
                                     fontWeight="600"
                                     textTransform="uppercase"
                                     mb="2"
-                                    color="gray.200"
+                                    color="#CECCCD"
+                                    _hover={{
+                                        color: '#FFF',
+                                        
+                                    }}
                                 >
                                     {section.heading}
                                 </Heading>
@@ -103,6 +116,7 @@ const Footer = () => {
                                     <Link
                                         key={index}
                                         fontSize="sm"
+                                        color={"#CECCCD"}
                                         _hover={{
                                             color: '#FF5757',
                                             textDecoration: 'underline',
@@ -116,6 +130,7 @@ const Footer = () => {
                     </Flex>
                 </Flex>
             </Box>
+        </Box>
         </>
     );
 };
