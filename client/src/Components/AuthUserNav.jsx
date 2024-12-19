@@ -11,7 +11,7 @@ const AuthUserNav = () => {
     };
 
     return (
-        <Box w="100%" bg="#fff" h="80px" boxShadow="md">
+        <Box w="100%" bg="#fff" h="70px" boxShadow="md">
             <Center w={{ base: "100%", md: "90%", lg: "85%" }} m="auto" h="100%">
                 <Flex px="2" justifyContent="space-between" w="100%">
                     <Center>
@@ -26,7 +26,7 @@ const AuthUserNav = () => {
                     </Center>
                     <Menu>
                         <MenuButton>
-                            <Avatar size={"md"} name={userName} bg="blue.500" color="white" cursor="pointer">
+                            <Avatar size={"sm"} name={userName} bg="blue.500" color="white" cursor="pointer">
 
                             </Avatar>
                         </MenuButton>
