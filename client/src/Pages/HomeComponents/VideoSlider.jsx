@@ -5,11 +5,13 @@ import { MdKeyboardArrowLeft } from "react-icons/md";
 import C1 from "../../Logo/Companies/C1.jpeg"
 import C7 from "../../Logo/Companies/C7.png"
 import C3 from "../../Logo/Companies/C3.png"
-
+import Video1 from "../../assets/Videos/Video1.mp4";
+import Video2 from "../../assets/Videos/Video2.mp4";
+import Video3 from "../../assets/Videos/Video3.mp4";
 const videos = [
-    "https://cdn.masaischool.com/masai-website/masai_is_building_a_great_solution_ankush_sachdeva_ceo_sharechat_1080p_679f7eaffd.mp4",
-    "https://cdn.masaischool.com/masai-website/masai_partners_speak_nobrokerofficial_highly_recommends_hiring_masai_graduates_1080p_97dd09e7d4.mp4",
-    "https://cdn.masaischool.com/masai-website/masai_being_a_solution_to_tech_hiring_masai_partners_speak_1080p_21acb9bcbb.mp4",
+    Video1,
+    Video2,
+    Video3,
 ];
 const VideoSlider = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
