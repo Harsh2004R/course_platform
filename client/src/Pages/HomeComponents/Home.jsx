@@ -7,6 +7,7 @@ import Marquees from './Marquees.jsx'
 import Test from "./Test.jsx"
 import VideoSlider from './VideoSlider.jsx'
 import OurTeam from './OurTeam.jsx'
+import Footer from '../../Components/Footer.jsx'
 const Home = () => {
   return (
 
@@ -24,7 +25,7 @@ const Home = () => {
         <VideoSlider />
         <Box w="100%" h={{ base: "20px", md: "25px", lg: "30px" }}></Box>
         <OurTeam />
-
+        <Footer />
 
 
 
