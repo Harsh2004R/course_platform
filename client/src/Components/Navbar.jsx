@@ -1,16 +1,25 @@
 import React, { useState } from 'react'
-import { Box, Button, Center, Divider, Flex, Image, Menu, MenuButton, MenuItem, MenuList, SkeletonCircle, SkeletonText, Text } from '@chakra-ui/react';
+import {
+  Box, Button, Center, Divider, Flex, Image, Menu, MenuButton, MenuItem, MenuList, SkeletonCircle, SkeletonText, Text,
+  Drawer,
+  DrawerBody,
+  DrawerHeader,
+  DrawerOverlay,
+  DrawerContent,
+  DrawerCloseButton,
+  useDisclosure,
+} from '@chakra-ui/react';
 import logo from "../Logo/Masterolgy-logo.png"
 import { ChevronDownIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import SE_course from "../Logo/Courses_logo/Se.png"
 import DA_course from "../Logo/Courses_logo/DA.png"
+import RegisterPage from '../Pages/RegisterPage';
 
 const Navbar = () => {
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [clicked, setClicked] = useState(true);
   const clickedFun = () => {
     setClicked((prevState) => !prevState);
-    // console.log(clicked)
   }
 
 
@@ -135,6 +144,7 @@ const Navbar = () => {
                   border={"1px solid #ff5757"}
                   _hover={{ bgColor: "red.100" }}
                   color={"#ff5757"}
+                  onClick={onOpen}
                   h="45px" w="100%" m="auto" fontSize={"14px"}>REGISTER</Button>
               </Center>
 
@@ -183,7 +193,7 @@ const Navbar = () => {
                         transition={"0.3s ease"}
                         border={"1px solid #ff5757"}
                         _hover={{ bgColor: "red.100", borderColor: "#ff5757" }}
-                        color={"#ff5757"}
+                        color={"#ff5757"} onClick={onOpen}
                         h="45px" w="100%" m="auto" fontSize={"14px"}>REGISTER</Button>
                     </Center>
 
@@ -196,9 +206,26 @@ const Navbar = () => {
           }
 
         </Box>
+        <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+          <DrawerOverlay backgroundColor={"rgba(0, 102, 255, 0.1)"} />
+          <DrawerContent maxW={{ base: "320px", md: "420px", lg: "470px" }}>
+            <DrawerCloseButton />
+            <DrawerHeader textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>Creat Account</DrawerHeader>
+            <DrawerBody>
+              <Flex justifyContent={"center"} w="100%">
+                <Text fontSize={{ base: "14px", md: "16px", lg: "16px" }} color="#000" fontWeight={"500"} textAlign={"center"}>Already have an account?</Text>
+                <Text ml="8px" fontSize={{ base: "14px", md: "16px", lg: "16px" }} fontWeight={"500"}  color="#1976D2" textAlign={"center"}>Sign in</Text>
+              </Flex>
+              <RegisterPage/>
+            </DrawerBody>
+          </DrawerContent>
+        </Drawer>
       </Box>
     </>
   )
 }
 
 export default Navbar;
+
+
+
