@@ -11,7 +11,7 @@ const AuthUserNav = () => {
     };
 
     return (
-        <Box w="100%" bg="#fff" h="70px" boxShadow="md">
+        <Box position={"fixed"} zIndex="1000" top="0" w="100%" bg="#fff" h="70px" boxShadow="rgba(0, 0, 0, 0.15) 0px 4px 12px" >
             <Center w={{ base: "100%", md: "90%", lg: "85%" }} m="auto" h="100%">
                 <Flex px="2" justifyContent="space-between" w="100%">
                     <Center>

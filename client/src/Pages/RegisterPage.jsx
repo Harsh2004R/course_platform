@@ -45,8 +45,8 @@ export default function RegisterPage() {
               <Input placeholder='Enter you whatsapp number' type="number" />
             </FormControl>
             <FormControl id="code">
-              <FormLabel>Referral Code (Optional)</FormLabel>
-              <Input placeholder='Enter referral Code' type="text" />
+              <FormLabel>Create password</FormLabel>
+              <Input placeholder='Create password here' type="password" />
             </FormControl>
             <Stack spacing={10}>
               {/* <Stack

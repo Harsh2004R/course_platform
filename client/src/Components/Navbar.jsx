@@ -14,14 +14,19 @@ import { ChevronDownIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import SE_course from "../Logo/Courses_logo/Se.png"
 import DA_course from "../Logo/Courses_logo/DA.png"
 import RegisterPage from '../Pages/RegisterPage';
+import LoginPage from '../Pages/LoginPage';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [clicked, setClicked] = useState(true);
+  const [toggleLoginButton, setToggleLoginButton] = useState(true);
   const clickedFun = () => {
     setClicked((prevState) => !prevState);
   }
-
+  const ToggleLogin = () => {
+    setToggleLoginButton((prevState) => !prevState);
+    console.log(toggleLoginButton)
+  }
 
   return (
     <>
@@ -210,13 +215,35 @@ const Navbar = () => {
           <DrawerOverlay backgroundColor={"rgba(0, 102, 255, 0.1)"} />
           <DrawerContent maxW={{ base: "320px", md: "420px", lg: "470px" }}>
             <DrawerCloseButton />
-            <DrawerHeader textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>Creat Account</DrawerHeader>
+            <DrawerHeader textAlign={"center"} fontSize={"2xl"} fontWeight={"bold"}>
+
+              {toggleLoginButton ? "Creat Account" : "Sign In"}
+
+            </DrawerHeader>
             <DrawerBody>
               <Flex justifyContent={"center"} w="100%">
-                <Text fontSize={{ base: "14px", md: "16px", lg: "16px" }} color="#000" fontWeight={"500"} textAlign={"center"}>Already have an account?</Text>
-                <Text ml="8px" fontSize={{ base: "14px", md: "16px", lg: "16px" }} fontWeight={"500"}  color="#1976D2" textAlign={"center"}>Sign in</Text>
+                <Text fontSize={{ base: "14px", md: "16px", lg: "16px" }} color="#000" fontWeight={"500"} textAlign={"center"}>
+
+                  {
+                    toggleLoginButton ? "Already have an account?" : "New User?"
+                  }
+
+                </Text>
+                <Text _hover={{cursor:"pointer"}} ml="8px" fontSize={{ base: "14px", md: "16px", lg: "16px" }} fontWeight={"500"} color="#1976D2" textAlign={"center"} onClick={ToggleLogin}>
+                  {
+                    toggleLoginButton ? "Sign in" : "Sign Up"
+                  }
+                </Text>
               </Flex>
-              <RegisterPage/>
+              {
+                toggleLoginButton ? (
+                  <RegisterPage />
+                ) : (
+                  <LoginPage/>
+                )
+              }
+
+
             </DrawerBody>
           </DrawerContent>
         </Drawer>
