@@ -1,9 +1,9 @@
 import React from 'react'
-import { Box, Button, Center, Divider, Flex, Grid, Text, } from '@chakra-ui/react'
+import { Box, Button, Center, Divider, Flex, Grid, Image, Text, } from '@chakra-ui/react'
 import AuthUserNav from "../Components/AuthUserNav.jsx"
 import { FaCheck } from "react-icons/fa";
 import Hires from '../Components/Hires.jsx';
-
+import Community from "../Logo/Our_Community.png"
 
 const data = [
     {
@@ -169,9 +169,14 @@ const MainCourses = () => {
 
                     </Grid>
                     <Box position={"relative"} w={{ base: "100%", md: "100%", lg: "40%" }} h="80vh"
-                        
+
                     >
                         <Hires />
+                        <Box position={"absolute"} bottom={"0"} w="100%" h="250px" >
+                            <Box position={{base:"relative",md:"relative",lg:"absolute"}}  right={{base:"0",md:"0",lg:"3"}} borderRadius={"lg"} w={{ base: "100%", md: "450px", lg: "75%" }} m="auto" h={{ base: "90%", md: "250px", lg: "250px" }} border={"1px solid #ccc"}>
+                                <Image borderRadius={"lg"} src={Community} h="100%" w="100%" alt="community" />
+                            </Box>
+                        </Box>
                     </Box>
                 </Flex>
 
