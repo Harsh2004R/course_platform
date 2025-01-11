@@ -133,10 +133,13 @@ const Course_Detail = () => {
 
                     </Flex>
                     <Flex
-                        border={"1px solid blue"}
+                        // border={"1px solid blue"}
                         gap="10px" p="2" alignItems={"center"} justifyContent={"space-between"} direction={{ base: "column", md: "column", lg: "column" }} w={{ base: "100%", md: "20%", lg: "25%" }} h={{ base: "auto", md: "auto", lg: "auto" }}>
 
-                        <Flex bg="#A0E1E1" justifyContent={"center"} borderRadius={"lg"} alignContent={"center"} alignItems={"center"} gap="15px" flexDirection={"column"} w="100%" border={"2px solid coral"}>
+                        <Flex bg="#A0E1E1" justifyContent={"center"} borderRadius={"lg"} alignContent={"center"} alignItems={"center"} gap="15px" flexDirection={"column"} w="100%" 
+                        // border={"2px solid coral"}
+                        pb="10px"
+                        >
                             <Text textAlign={"center"} fontWeight={"700"} fontSize={{ base: 'xl', md: '2xl', lg: '2xl' }}>What you'll learn</Text>
 
                             {
