@@ -4,7 +4,7 @@ import Home from '../Pages/HomeComponents/Home';
 import AuthUserNav from '../Components/AuthUserNav';
 import MainCourses from '../Pages/MainCourses';
 import Course_Detail from '../Pages/Course_Detail';
-import Applications from '../Pages/Applications';
+import Applications from '../Components/Applications';
 import Student_data from '../Pages/Student_data';
 const AllRoutes = () => {
     return (

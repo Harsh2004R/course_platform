@@ -12,7 +12,7 @@ import {
   useToast,
   VStack,
 } from "@chakra-ui/react";
-import Application from "../Pages/Applications";
+import Application from "./Applications";
 
 const StudentDataForm = () => {
   const [formData, setFormData] = useState({
@@ -144,9 +144,7 @@ const StudentDataForm = () => {
       </Box>
 
 
-      <VStack position={"fixed"} bottom={"0"} h="10vh" bg="#fff" boxShadow="rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;" w="100%" >
-        <Application />
-      </VStack>
+ 
 
 
     </Box>

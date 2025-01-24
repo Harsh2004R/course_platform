@@ -3,7 +3,7 @@ import React from 'react'
 const Test_student = () => {
   return (
     <div>
-     Test student 
+    Scheduling test here..
     </div>
   )
 }
