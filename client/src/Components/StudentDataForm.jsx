@@ -10,7 +10,9 @@ import {
   Stack,
   Button,
   useToast,
+  VStack,
 } from "@chakra-ui/react";
+import Application from "../Pages/Applications";
 
 const StudentDataForm = () => {
   const [formData, setFormData] = useState({
@@ -61,80 +63,97 @@ const StudentDataForm = () => {
   };
 
   return (
-    <Box
-      maxW="md"
-      mx="auto"
-      mt={4}
-      p={6}
-      borderWidth={1}
-      borderRadius="lg"
-      boxShadow="lg"
+    <Box w="100%" h="100vh"
+    // border={"3px solid red"}
     >
-      <form onSubmit={handleSubmit}>
-        {/* Current Status */}
-        <FormControl mb={4} isRequired>
-          <FormLabel>Current Status</FormLabel>
-          <Select
-            placeholder="Select your status"
-            name="status"
-            value={formData.status}
-            onChange={handleChange}
-          >
-            <option value="student">Student</option>
-            <option value="job">Job</option>
-            <option value="unemployed">Unemployed</option>
-          </Select>
-        </FormControl>
 
-        {/* Time Availability */}
-        <FormControl mb={4} isRequired>
-          <FormLabel>How much time can you spend?</FormLabel>
-          <RadioGroup
-            name="time"
-            onChange={(value) => handleRadioChange("time", value)}
-            value={formData.time}
-          >
-            <Stack direction="column">
-              <Radio value="full-time">12 hours (Full Time)</Radio>
-              <Radio value="part-time">3-4 hours (Part Time)</Radio>
-            </Stack>
-          </RadioGroup>
-        </FormControl>
 
-        {/* Internet Connection */}
-        <FormControl mb={4} isRequired>
-          <FormLabel>Do you have a proper internet connection?</FormLabel>
-          <RadioGroup
-            name="internet"
-            onChange={(value) => handleRadioChange("internet", value)}
-            value={formData.internet}
-          >
-            <Stack direction="row">
-              <Radio value="yes">Yes</Radio>
-              <Radio value="no">No</Radio>
-            </Stack>
-          </RadioGroup>
-        </FormControl>
+      <Box
+        maxW="md"
+        mx="auto"
+        mt={4}
+        p={6}
+        borderWidth={1}
+        borderRadius="lg"
+        boxShadow="lg"
+      // border={"2px solid lime"}
+      >
+        <form onSubmit={handleSubmit}>
+          {/* Current Status */}
+          <FormControl mb={4} isRequired>
+            <FormLabel>Current Status</FormLabel>
+            <Select
+              placeholder="Select your status"
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+            >
+              <option value="student">Student</option>
+              <option value="job">Job</option>
+              <option value="unemployed">Unemployed</option>
+            </Select>
+          </FormControl>
 
-        {/* Phone Number */}
-        <FormControl mb={4} isRequired>
-          <FormLabel>Enter Phone Number</FormLabel>
-          <Input
-            type="text"
-            name="phone"
-            placeholder="Your 10-digit phone number"
-            value={formData.phone}
-            onChange={handleChange}
-          />
-        </FormControl>
+          {/* Time Availability */}
+          <FormControl mb={4} isRequired>
+            <FormLabel>How much time can you spend?</FormLabel>
+            <RadioGroup
+              name="time"
+              onChange={(value) => handleRadioChange("time", value)}
+              value={formData.time}
+            >
+              <Stack direction="column">
+                <Radio value="full-time">12 hours (Full Time)</Radio>
+                <Radio value="part-time">3-4 hours (Part Time)</Radio>
+              </Stack>
+            </RadioGroup>
+          </FormControl>
 
-        {/* Submit Button */}
-        <Button colorScheme="blue" type="submit" width="full">
-          Submit
-        </Button>
-      </form>
+          {/* Internet Connection */}
+          <FormControl mb={4} isRequired>
+            <FormLabel>Do you have a proper internet connection?</FormLabel>
+            <RadioGroup
+              name="internet"
+              onChange={(value) => handleRadioChange("internet", value)}
+              value={formData.internet}
+            >
+              <Stack direction="row">
+                <Radio value="yes">Yes</Radio>
+                <Radio value="no">No</Radio>
+              </Stack>
+            </RadioGroup>
+          </FormControl>
+
+          {/* Phone Number */}
+          <FormControl mb={4} isRequired>
+            <FormLabel>Enter Phone Number</FormLabel>
+            <Input
+              type="text"
+              name="phone"
+              placeholder="Your 10-digit phone number"
+              value={formData.phone}
+              onChange={handleChange}
+            />
+          </FormControl>
+
+          {/* Submit Button */}
+          <Button colorScheme="blue" type="submit" width="full">
+            Submit
+          </Button>
+        </form>
+      </Box>
+
+
+      <VStack position={"fixed"} bottom={"0"} h="10vh" bg="#fff" boxShadow="rgba(0, 0, 0, 0.56) 0px 22px 50px 4px;" w="100%" >
+        <Application />
+      </VStack>
+
+
     </Box>
+
   );
 };
 
 export default StudentDataForm;
+
+

@@ -7,7 +7,10 @@ const Student_data = () => {
         <>
             <AuthUserNav />
 
-            <Box w="100%" h="100vh" mt="80px" border={"2px solid lime"}>
+            <Box w="100%" h="100vh" mt="80px" mb="10vh" 
+            // border={"2px solid lime"}
+            
+            >
                 <StudentDataForm />
 
 
