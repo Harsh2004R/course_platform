@@ -1,10 +1,11 @@
 import React from 'react'
+import { Box } from '@chakra-ui/react'
 
 const Test_student = () => {
   return (
-    <div>
-    Scheduling test here..
-    </div>
+    <Box h="100vh">
+      Scheduling test here..
+    </Box>
   )
 }
 
