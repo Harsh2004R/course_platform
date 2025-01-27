@@ -42,7 +42,7 @@ const UserSchema = new mongoose.Schema(
       minlength: [4, "Password must be at least 4 characters long"],
     },
     contact_no: {
-      type: Number,
+      type: String,
       required: [true, "Contact number is required"],
       unique: true,
       match: [/^\d{10}$/, "Contact number must be a 10-digit number"],
