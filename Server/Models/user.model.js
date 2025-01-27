@@ -24,28 +24,21 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: [true, "Full name is required"],
       trim: true,
-      minlength: [3, "Full name must be at least 3 characters long"],
     },
     email: {
       type: String,
       required: [true, "Email is required"],
       unique: true, // Ensures no duplicate emails
       lowercase: true,
-      match: [
-        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-        "Please enter a valid email address",
-      ],
     },
     password: {
       type: String,
       required: [true, "Password is required"],
-      minlength: [4, "Password must be at least 4 characters long"],
     },
     contact_no: {
       type: String,
       required: [true, "Contact number is required"],
       unique: true,
-      match: [/^\d{10}$/, "Contact number must be a 10-digit number"],
     },
     profile_picture: {
       type: String,
@@ -75,6 +68,6 @@ const UserSchema = new mongoose.Schema(
 // Add an index to improve query performance for frequently searched fields
 UserSchema.index({ email: 1, contact_no: 1 });
 
-const UserModel = mongoose.model("User", UserSchema);
+const UserModel = mongoose.model("user", UserSchema);
 
 module.exports = { UserModel };
