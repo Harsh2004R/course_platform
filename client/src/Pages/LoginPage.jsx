@@ -43,16 +43,16 @@ export default function LoginPage() {
         position: "top",
       });
     }
-    if (!/^\d{10}$/.test(loginForm.identifier)) {
-      toast({
-        title: "Invalid Phone Number",
-        description: "Phone number must be exactly 10 digits.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-        position: "top",
-      });
-    }
+    // if (!/^\d{10}$/.test(loginForm.identifier)) {
+    //   toast({
+    //     title: "Invalid Phone Number",
+    //     description: "Phone number must be exactly 10 digits.",
+    //     status: "error",
+    //     duration: 5000,
+    //     isClosable: true,
+    //     position: "top",
+    //   });
+    // }
   }
 
 
@@ -92,51 +92,59 @@ export default function LoginPage() {
   }
 
   return (
-    <Flex
-      minH={'auto'}
-      align={'center'}
-      justify={'center'}
-    >
-      <Box
-        w="100%"
-        rounded={'lg'}
-        bg={useColorModeValue('white', 'gray.700')}
-        //   boxShadow={'lg'}
-        py={8}
-        px={{ base: "0", md: "2", lg: "2" }}>
-        <Stack spacing={7}>
-          <FormControl id="email|phone">
-            <FormLabel>Phone number or email address<span style={{ color: "#FF5757" }}>*</span></FormLabel>
-            <Input name="identifier" value={loginForm.identifier} onChange={handleChange} placeholder='Enter phone number or email address' type="text" />
-          </FormControl>
-          <FormControl id="phone">
-            <FormLabel>Password here<span style={{ color: "#FF5757" }}>*</span></FormLabel>
-            <Input name="password" value={loginForm.password} onChange={handleChange} placeholder='Enter you password here' type="password" />
-          </FormControl>
+    <>
+      {loading ? (
+        <p>
+          loading.....
+        </p>
+      ) : (
+        <Flex
+          minH={'auto'}
+          align={'center'}
+          justify={'center'}
+        >
+          <Box
+            w="100%"
+            rounded={'lg'}
+            bg={useColorModeValue('white', 'gray.700')}
+            //   boxShadow={'lg'}
+            py={8}
+            px={{ base: "0", md: "2", lg: "2" }}>
+            <Stack spacing={7}>
+              <FormControl id="email|phone">
+                <FormLabel>Phone number or email address<span style={{ color: "#FF5757" }}>*</span></FormLabel>
+                <Input name="identifier" value={loginForm.identifier} onChange={handleChange} placeholder='Enter phone number or email address' type="text" />
+              </FormControl>
+              <FormControl id="phone">
+                <FormLabel>Password here<span style={{ color: "#FF5757" }}>*</span></FormLabel>
+                <Input name="password" value={loginForm.password} onChange={handleChange} placeholder='Enter you password here' type="password" />
+              </FormControl>
 
-          <Stack spacing={10}>
-            <Stack
-              direction={{ base: 'column', sm: 'row' }}
-              align={'start'}
-              justify={'space-between'}>
-              <Checkbox>Remember me</Checkbox>
-              <Text color={'blue.400'}>Forgot password?</Text>
+              <Stack spacing={10}>
+                <Stack
+                  direction={{ base: 'column', sm: 'row' }}
+                  align={'start'}
+                  justify={'space-between'}>
+                  <Checkbox>Remember me</Checkbox>
+                  <Text color={'blue.400'}>Forgot password?</Text>
+                </Stack>
+                <Button
+                  bg={"#1976D2"}
+                  color={'white'}
+                  h="45px"
+                  _hover={{
+                    bg: 'blue.500',
+                  }}
+                  onClick={handleSubmit}
+                >
+                  CONTINUE
+                </Button>
+              </Stack>
             </Stack>
-            <Button
-              bg={"#1976D2"}
-              color={'white'}
-              h="45px"
-              _hover={{
-                bg: 'blue.500',
-              }}
-              onClick={handleSubmit}
-            >
-              CONTINUE
-            </Button>
-          </Stack>
-        </Stack>
-      </Box>
+          </Box>
 
-    </Flex>
+        </Flex>
+      )}
+    </>
   )
 }
