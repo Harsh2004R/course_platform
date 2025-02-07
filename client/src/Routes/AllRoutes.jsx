@@ -6,6 +6,7 @@ import MainCourses from '../Pages/MainCourses';
 import Course_Detail from '../Pages/Course_Detail';
 import Applications from '../Components/Applications';
 import Student_data from '../Pages/Student_data';
+import Dashboard from '../Admin-Side/Dashboard';
 const AllRoutes = () => {
     return (
 
@@ -16,6 +17,8 @@ const AllRoutes = () => {
             <Route path="/details" element={<Course_Detail />}/>
             <Route path="/application" element={<Applications />}/>
             <Route path="/student" element={<Student_data />}/>
+            <Route path="/admin/dashboard" element={<Dashboard />}/>
+            
         </Routes>
 
     )
