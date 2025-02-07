@@ -20,12 +20,12 @@ const registerUser = async (req, res) => {
 
         // Hash password and saving the user
         const hashedPassword = await bcrypt.hash(password, 8);
-        const newUser = new UserModel({ full_name:name, email:email, password: hashedPassword, contact_no:phone });
+        const newUser = new UserModel({ full_name: name, email: email, password: hashedPassword, contact_no: phone });
 
         await newUser.save();
         res.status(201).json({ message: "User registered successfully" });
     } catch (error) {
-        res.status(500).json({ message: "Something went wrong", error:error.message });
+        res.status(500).json({ message: "Something went wrong", error: error.message });
     }
 };
 
@@ -77,9 +77,24 @@ const loginUser = async (req, res) => {
 
         res.status(200).json({ message: "Login successful", token });
     } catch (error) {
-        res.status(500).json({ message: "Something went wrong", error:error.message });
+        res.status(500).json({ message: "Something went wrong", error: error.message });
     }
 };
 
 
-module.exports = { registerUser, loginUser };
+const usersData = async (req, res) => {
+    try {
+        const users = await UserModel.find();
+        res.status(200).json(users); // Send the list of users as a response
+    } catch (error) {
+        res.status(500).json({ message: "Error fetching users", error: error.message });
+    }
+};
+
+
+
+
+
+
+
+module.exports = { registerUser, loginUser, usersData };
