@@ -1,53 +1,27 @@
-'use client'
-
+import { Link, Outlet } from 'react-router-dom'
 import {
-    IconButton,
-    Avatar,
-    Box,
-    CloseButton,
-    Flex,
-    HStack,
-    VStack,
-    Icon,
-    useColorModeValue,
-    Text,
-    Drawer,
-    DrawerContent,
-    useDisclosure,
-    Menu,
-    MenuButton,
-    MenuDivider,
-    MenuItem,
-    MenuList,
-    Image,
-    Heading
+    IconButton, Avatar, Box, CloseButton, Flex, HStack, VStack, Icon,
+    useColorModeValue, Text, Drawer, DrawerContent, useDisclosure,
+    Menu, MenuButton, MenuDivider, MenuItem, MenuList, Image
 } from '@chakra-ui/react'
 import {
-    FiHome,
-    FiTrendingUp,
-    FiCompass,
-    FiStar,
-    FiSettings,
-    FiMenu,
-    FiBell,
-    FiChevronDown,
+    FiHome, FiTrendingUp, FiCompass, FiStar, FiSettings, FiMenu, FiBell, FiChevronDown
 } from 'react-icons/fi'
 
 import logo from "../Logo/Masterolgy-logo-normal.png"
 
+
 const LinkItems = [
-    { name: 'Dashboard', icon: FiHome },
-    { name: 'Users', icon: FiTrendingUp },
-    { name: 'Products', icon: FiCompass },
-    { name: 'Active Users', icon: FiStar },
-    { name: 'Black List', icon: FiSettings },
+    { name: 'Dashboard', icon: FiHome, path: "" },
+    { name: 'Users', icon: FiTrendingUp, path: "users" },
+    { name: 'Products', icon: FiCompass, path: "products" },
+    { name: 'Active Users', icon: FiStar, path: "active-users" },
+    { name: 'Black List', icon: FiSettings, path: "blacklist" },
 ]
 
 const SidebarContent = ({ onClose, ...rest }) => {
     return (
-        <Box
-            // border="1px solid red"
-            transition="3s ease"
+        <Box transition="3s ease"
             bg={useColorModeValue('white', 'gray.200')}
             borderRight="1px"
             borderRightColor={useColorModeValue('gray.200', 'gray.700')}
@@ -56,14 +30,12 @@ const SidebarContent = ({ onClose, ...rest }) => {
             h="full"
             {...rest}>
             <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-
-
                 <Image w="100%" h="auto" src={logo} alt="" />
-
                 <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
             </Flex>
+
             {LinkItems.map((link) => (
-                <NavItem key={link.name} icon={link.icon}>
+                <NavItem key={link.name} icon={link.icon} path={link.path}>
                     {link.name}
                 </NavItem>
             ))}
@@ -71,11 +43,10 @@ const SidebarContent = ({ onClose, ...rest }) => {
     )
 }
 
-const NavItem = ({ icon, children, ...rest }) => {
+const NavItem = ({ icon, children, path, ...rest }) => {
     return (
-        <Box as="a" href="#" style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
-            <Flex
-                align="center"
+        <Box as={Link} to={path} style={{ textDecoration: 'none' }} _focus={{ boxShadow: 'none' }}>
+            <Flex align="center"
                 p="4"
                 mx="4"
                 borderRadius="lg"
@@ -90,9 +61,7 @@ const NavItem = ({ icon, children, ...rest }) => {
                     <Icon
                         mr="4"
                         fontSize="16"
-                        _groupHover={{
-                            color: 'white',
-                        }}
+                        _groupHover={{ color: 'white' }}
                         as={icon}
                     />
                 )}
@@ -121,29 +90,21 @@ const MobileNav = ({ onOpen, ...rest }) => {
                 aria-label="open menu"
                 icon={<FiMenu />}
             />
-
-
             <Image display={{ base: 'flex', md: 'none' }} w="30%" h="auto" src={logo} alt="" />
-
             <HStack spacing={{ base: '0', md: '6' }}>
                 <IconButton size="lg" variant="ghost" aria-label="open menu" icon={<FiBell />} />
                 <Flex alignItems={'center'}>
                     <Menu>
                         <MenuButton py={2} transition="all 0.3s" _focus={{ boxShadow: 'none' }}>
                             <HStack>
-                                <Avatar
-                                    size={'sm'}
-                                    src="https://avatars.githubusercontent.com/u/115461808?v=4"
-                                />
+                                <Avatar size={'sm'} src="https://avatars.githubusercontent.com/u/115461808?v=4" />
                                 <VStack
                                     display={{ base: 'none', md: 'flex' }}
                                     alignItems="flex-start"
                                     spacing="1px"
                                     ml="2">
                                     <Text fontSize="sm">Justina Clark</Text>
-                                    <Text fontSize="xs" color="gray.600">
-                                        Admin
-                                    </Text>
+                                    <Text fontSize="xs" color="gray.600">Admin</Text>
                                 </VStack>
                                 <Box display={{ base: 'none', md: 'flex' }}>
                                     <FiChevronDown />
@@ -177,9 +138,7 @@ const Dashboard = () => {
             </Drawer>
             <MobileNav onOpen={onOpen} />
             <Box ml={{ base: 0, md: 60 }} p="4">
-                {/* Content */}
-
-
+                <Outlet />
             </Box>
         </Box>
     )
